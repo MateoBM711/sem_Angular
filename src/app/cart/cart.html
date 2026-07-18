@@ -1,0 +1,9 @@
+<h3>Carrito de Compras</h3>
+
+<ul>
+    @for (item of (cartList$ | async) ?? []; track item.nombre) {
+    <li>
+        {{item.nombre}} : {{item.cantidad}} - ${{item.precio}}
+    </li>
+    }
+</ul>
